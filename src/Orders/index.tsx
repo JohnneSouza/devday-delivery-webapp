@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Footer from '../Footer';
 import { fetchProducts, saveOrder } from './api';
 import { checkIsSelected } from './helpers';
-import OrderLocation from './OrderLocation';
+// import OrderLocation from './OrderLocation';
 import OrderSummary from './OrderSummary';
 import ProductsList from './ProductsList'
 import StepHeaders from './StepHeaders'
