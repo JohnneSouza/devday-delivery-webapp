@@ -5,14 +5,19 @@
     align-items: center;
 }
 
-.logo-image {
-    margin-left: 2rem;
-    width: 4rem;
-    height: 4rem;
+.main-navbar > .logo-text {
+    justify-content: center;
+    font-family: Ubuntu;
+    color: white;
+    margin-left: 3rem;
+    font-size: larger;
+    font-weight: 600;
 }
 
-.logo-text {
-    color: white;
-    margin-left: 15px;
-    font-size: larger;
+.logo-image {
+    position: relative;
+    margin-left: 2rem;
+    margin-right: 50%;
+    width: 4rem;
+    height: 4rem;
 }

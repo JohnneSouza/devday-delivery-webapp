@@ -46,21 +46,22 @@ function Orders() {
 			products: productsIds
 		}
 
-		saveOrder(payload).then((response) => {
-			if (payload.products.length === 0) {
-				toast.dark('Que tal selecionar ao menos 1 produto? 😅');
-			} else {
+		if (payload.products.length === 0) {
+			toast.dark('Que tal selecionar ao menos 1 produto? 😅');
+		} else {
+
+			saveOrder(payload).then((response) => {
 				toast.error('Pedido enviado com sucesso!');
 				toast(`Pedido Nº ${response.data.id}`);
 				setSelectedProducts([]);
-			}
-		})
-			.catch(() => {
-				toast.dark("Ops! Algo deu errado! 😅", {
-					autoClose: false,
-					position: "bottom-center"
-				});
 			})
+				.catch(() => {
+					toast.dark("Ops! Algo de errado não está certo, não conseguimos enviar seu pedido", {
+						autoClose: false,
+						position: "bottom-center"
+					});
+				})
+		}
 	}
 
 
