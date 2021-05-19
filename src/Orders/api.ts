@@ -1,12 +1,13 @@
 import axios from "axios";
 import { OrderPayload } from "./types";
 
-const API_URL = "http://localhost:3003";
+const PRODUCTS_API_URL = process.env.REACT_APP_PRODUCTS_API_URL;
+const ORDERS_API_URL = process.env.REACT_APP_ORDERS_API_URL;
 
 export function fetchProducts() {
-  return axios(`${API_URL}/products`)
+  return axios(`${PRODUCTS_API_URL}/products`)
 }
 
 export function saveOrder(payload: OrderPayload){
-  return axios.post(`${API_URL}/orders`, payload)
+  return axios.post(`${ORDERS_API_URL}/orders`, payload)
 }
