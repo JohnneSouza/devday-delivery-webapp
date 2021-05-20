@@ -7,6 +7,7 @@ function Navbar() {
         <nav className="main-navbar">
             <Logo className="logo-image"/>
             <Link to="/" className="logo-text">Home</Link>
+            <Link to="/orders" className="logo-text">Comprar</Link>
             <Link to="/products" className="logo-text">Produtos</Link>
             <Link to="/purchase" className="logo-text">Pedidos</Link>
         </nav>

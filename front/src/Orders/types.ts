@@ -13,3 +13,9 @@ type ProductId = {
 export type OrderPayload = {
   products: ProductId[];
 }
+
+export type Purchase = {
+  id: string;
+  products: Product[];
+  total: number;
+}

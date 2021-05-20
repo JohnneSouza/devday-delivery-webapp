@@ -22,7 +22,6 @@ function Orders() {
 			.then(response => setProducts(response.data))
 			.catch(error => {
 				toast.dark("Ops! Algo deu errado! Não conseguimos achar os produtos! :(", {
-					autoClose: false,
 					position: "bottom-center"
 				});
 				console.log(error)
@@ -51,13 +50,12 @@ function Orders() {
 		} else {
 
 			saveOrder(payload).then((response) => {
-				toast.error('Pedido enviado com sucesso!');
+				toast('Pedido enviado com sucesso!');
 				toast(`Pedido Nº ${response.data.id}`);
 				setSelectedProducts([]);
 			})
 				.catch(() => {
 					toast.dark("Ops! Algo de errado não está certo, não conseguimos enviar seu pedido", {
-						autoClose: false,
 						position: "bottom-center"
 					});
 				})
