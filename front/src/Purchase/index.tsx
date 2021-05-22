@@ -2,7 +2,7 @@ import { toast } from 'react-toastify';
 import { useEffect, useState } from 'react';
 import { deleteOrder, fetchOrders } from '../Orders/api';
 
-import './styles.css'
+import './styles.scss'
 import PurchaseList from './PurchaseList';
 import { Purchase } from '../Orders/types';
 import PurchaseHeader from './PurchaseHeader';

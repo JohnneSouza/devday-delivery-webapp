@@ -5,7 +5,7 @@ const PRODUCTS_API_URL = process.env.REACT_APP_PRODUCTS_API_URL;
 const ORDERS_API_URL = process.env.REACT_APP_ORDERS_API_URL;
 
 export function fetchProducts() {
-  return axios(`${PRODUCTS_API_URL}/products`, {timeout: 2000});
+  return axios(`${PRODUCTS_API_URL}/products`, {timeout: 20000});
 }
 
 export function saveOrder(payload: OrderPayload){
@@ -13,7 +13,7 @@ export function saveOrder(payload: OrderPayload){
 }
 
 export function fetchOrders() {
-  return axios.get(`${ORDERS_API_URL}/orders`, {timeout: 2000});
+  return axios.get(`${ORDERS_API_URL}/orders`, {timeout: 20000});
 }
 
 export function deleteOrder(id: string) {

@@ -15,13 +15,11 @@ function PurchaseCard({ purchase, handleDelete }: Props) {
       </h3>
       <div className="purchase-card-description">
         <h3>Produtos</h3>
-        <p>
           <ul>
             {purchase.products.map(product => {
-              return <li>{product.name}</li>
+              return <li key={product.id}>1x {product.name.substring(0, 21)}</li>
             })}
           </ul>
-        </p>
       </div>
       <button
         className="button-remove"

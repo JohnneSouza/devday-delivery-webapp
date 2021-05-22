@@ -5,7 +5,7 @@
     align-items: center;
 }
 
-.main-navbar > .logo-text {
+.logo-text {
     justify-content: center;
     font-family: Ubuntu;
     color: white;
@@ -16,8 +16,8 @@
 
 .logo-image {
     position: relative;
+    max-width: 100%;
     margin-left: 2rem;
-    margin-right: 50%;
     width: 4rem;
     height: 4rem;
 }

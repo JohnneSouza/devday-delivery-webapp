@@ -1,4 +1,4 @@
-import './styles.css';
+import './styles.scss';
 import { ReactComponent as DeliveryImage } from './delivery-man.svg'
 import Footer from '../Footer';
 import { Link } from 'react-router-dom';
