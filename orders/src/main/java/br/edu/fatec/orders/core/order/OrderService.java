@@ -1,7 +1,10 @@
 package br.edu.fatec.orders.core.order;
 
 import br.edu.fatec.orders.feign.ProductFeign;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -36,5 +39,13 @@ public class OrderService {
 
     public List<Product> fetchProducts(List<String> productsId){
         return productFeign.fetchProductsById(productsId.toArray(new String[0]));
+    }
+
+    public void deleteOrder(String id) {
+        if (orderRepository.findById(id).isPresent()){
+            orderRepository.deleteById(id);
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Order not found");
+        }
     }
 }

@@ -2,7 +2,9 @@ package br.edu.fatec.orders.rest;
 
 import br.edu.fatec.orders.core.order.Order;
 import br.edu.fatec.orders.core.order.OrderService;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,5 +30,10 @@ public class OrderResource {
     @PostMapping
     public Order createOrder(@RequestBody Order order){
         return orderService.saveOrder(order);
+    }
+
+    @DeleteMapping("{id}")
+    public void deleteOrder(@PathVariable String id){
+        orderService.deleteOrder(id);
     }
 }
